@@ -2,7 +2,6 @@
 // font-family: 'Roboto', sans-serif;
 
 @import 'values';
-@import 'desktop';
 
 // NAVBAR 
 
@@ -20,3 +19,75 @@ body {
     background: rgb(242, 242, 242);
 }
 
+////////////////////////////////////
+
+.container1 {
+    width: 100%;
+    background: rgb(111, 115, 218);
+    color: white;
+}
+
+nav {
+    @include flex-between-center;
+    @include margin-center;
+    width: 95%;
+    height: 50px
+}
+
+
+nav div {
+    @include flex-between-center;
+}
+
+nav .bell {
+    width: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    border-right: solid 1px rgb(154, 153, 219);
+    margin-right: 10px;
+}
+
+nav div img:nth-child(2) {
+    width: 35px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+nav div span {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+////////////////////////////////
+
+.container2 {
+    width: 100%;
+    background: rgb(65, 67, 117);
+}
+
+.tabs {
+    @include flex-between-center;
+    @include margin-center;
+    height: 50px;
+    width: 65%;
+
+
+    img {
+        width: 30px
+    }
+}
+
+////////////////////////////////
+
+main {
+    padding-left: 60px;
+    width: 100%;
+}
+
+main div {
+    max-width: 1500px;
+    @include margin-center;
+}
+
+@import 'desktop';

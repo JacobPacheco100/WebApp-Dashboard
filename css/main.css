@@ -1,15 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-@media (min-width: 1024px) {
-  .container2 {
-    width: 50px;
-    height: 100px;
-  }
-  .tabs {
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-  }
+.bold {
+  font-weight: 600;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +15,90 @@ html {
 
 body {
   background: rgb(242, 242, 242);
+}
+
+.container1 {
+  width: 100%;
+  background: rgb(111, 115, 218);
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 95%;
+  height: 50px;
+}
+
+nav div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .bell {
+  width: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  border-right: solid 1px rgb(154, 153, 219);
+  margin-right: 10px;
+}
+
+nav div img:nth-child(2) {
+  width: 35px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+nav div span {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.container2 {
+  width: 100%;
+  background: rgb(65, 67, 117);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 50px;
+  width: 65%;
+}
+.tabs img {
+  width: 30px;
+}
+
+main {
+  padding-left: 60px;
+  width: 100%;
+}
+
+main div {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container2 {
+    width: 50px;
+    height: 100vh;
+    padding-top: 20px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  .tabs {
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

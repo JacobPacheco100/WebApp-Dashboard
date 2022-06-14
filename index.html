@@ -10,9 +10,45 @@
 </head>
 <body>
     
-    <div>
-        <canvas id="myChart"></canvas>
+    <div class="container1">
+        <nav>
+            <span class="logo"><span class="bold">Web</span>App</span>
+
+            <div>
+                <img class="bell" src="svgs/bell.svg" alt="notification">
+                <img src="images/member-4.jpg" alt="profile pic">
+                <span>Student Name</span>
+            </div>
+        </nav>
     </div>
+
+    <div class="container2">
+        <div class="tabs">
+            <img src="svgs/home.svg" alt="home">
+            <img src="svgs/bar-chart.svg" alt="chart">
+            <img src="svgs/members.svg" alt="members">
+            <img src="svgs/settings.svg" alt="settings">
+        </div>
+    </div>
+
+    <main>
+        <div>
+            <canvas id="traffic-chart"></canvas>
+        </div>
+        <div>
+            <canvas id="daily-chart"></canvas>
+        </div>
+        <div>
+            <canvas id="mobile-chart"></canvas>
+        </div>
+    </main>
+    <section>
+        <div class="social-stats"></div>
+        <div class="new-members"></div>
+        <div class="recent-activities"></div>
+        <div class="message-user"></div>
+        <div class="settings"></div>
+    </section>
 
     <script src="app.js"></script>
 </body>

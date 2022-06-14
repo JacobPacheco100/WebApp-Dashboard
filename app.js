@@ -1,35 +1,104 @@
-let myChart = document.getElementById('myChart').getContext('2d');
+const trafficCanvas = document.getElementById('traffic-chart')
+const dailyCanvas = document.getElementById('daily-chart')
+const mobileCanvas = document.getElementById("mobile-chart")
 
-Chart.defaults.global.defaultFontFamily:'lato';
-Chart.defaults.global.defaultFontSize:18;
+//traffic
 
-let massPopChart = new Chart(myChart, {
-    type: 'bar', // bar, horizontal, pie, line, doughnut, radar, polarArea
-    data:{
-        labels:['boston', 'worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
-        datasets:[{
-            label:'population',
-            data:[
-                617594,
-                181045,
-                153060,
-                106519,
-                105162,
-                95072
-            ],
-            backgroundColor: [
-                'green',
-                'red',
-                'purple',
-                'orange',
-                'blue',
-                'cyan'
-            ],
-            borderWidth:2,
-            borderColor: 'red',
-            hoverBorderWidth:3,
-            hoverBorderColor: 'black'
-        }]
+let trafficData = {
+    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+    "4-10", "11-17", "18-24", "25-31"],
+    datasets: [{
+    data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
+    2500],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+    borderWidth: 1,
+    }]
+    };
+
+let trafficOptions = {
+    tension: 0.4,
+    backgroundColor: 'rgba(112, 104, 201, .5)',
+    fill: true,
+    aspectRatio: 2.5,
+    scales: {
+    y: {
+    beginAtZero: true
     }
-})
+    },
+    plugins: {
+    legend: {
+    display: false
+    }
+    }
+    };
 
+let trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: trafficData,
+    options: trafficOptions
+    });
+
+// daily
+
+const dailyData = {
+    labels: ["S", "M", "T", "W", "T", "F", "S"],
+    datasets: [{
+    label: '# of Hits',
+    data: [75, 115, 175, 125, 225, 200, 100],
+    backgroundColor: '#7477BF',
+    borderWidth: 1
+    }]
+    };
+    const dailyOptions = {
+    scales: {
+    y: {
+    beginAtZero: true
+    }
+    },
+    plugins: {
+    legend: {
+    display: false
+    }
+    }
+    };
+
+let dailyChart = new Chart(dailyCanvas, {
+    type: 'bar',
+    data: dailyData,
+    options: dailyOptions
+    });
+
+// mobile
+
+const mobileData = {
+    labels: ["Desktop", "Tablet", "Phones"],
+    datasets: [{
+    label: '# of Users',
+    data: [2000, 550, 500],
+    borderWidth: 0,
+    backgroundColor: [
+    '#7477BF',
+    '#78CF82',
+    '#51B6C8'
+    ]
+    }]
+    };
+
+const mobileOptions = {
+    aspectRatio: 1.9,
+    plugins: {
+    legend: {
+    position: 'right',
+    labels: {
+    boxWidth: 20,
+    fontStyle: 'bold'
+    }
+    }
+    }
+    };
+
+let mobileChart = new Chart(mobileCanvas, {
+    type: 'doughnut',
+    data: mobileData,
+    options: mobileOptions
+    });
