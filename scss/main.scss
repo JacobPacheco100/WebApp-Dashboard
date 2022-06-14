@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background: rgb(242, 242, 242);
+    background: $bodyColor;
 }
 
 ////////////////////////////////////
@@ -44,7 +44,7 @@ nav .bell {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 10px;
-    border-right: solid 1px rgb(154, 153, 219);
+    border-right: solid 1px $lightBlue;
     margin-right: 10px;
 }
 
@@ -78,14 +78,97 @@ nav div span {
     }
 }
 
+// DASHBOARD
+
 .dashboard-tab {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 400;
+    background: white;
+    display: inline-block;
+    height: 50px;
+    width: 130px;
     padding: 10px;
-    display: block;
-    background: red;
-    border: solid black 1px
+    padding-top: 14px;
+
 }
+
+.alert {
+    @include flex-between-center;
+    @include margin-center;
+    background: $lightBlue;
+    color: white;
+    font-weight: 300;
+    font-size: 13px;
+    height: 30px;
+    border-radius: 5px;
+    width: 90%;
+    
+
+    span {
+        font-weight: 500;
+    }
+}
+
+main {
+    background: white;
+    padding-top: 20px;
+}
+
+main div {
+    border-bottom: 1px solid rgb(177, 177, 177);
+    padding: 20px
+}
+
+main div h2 {
+    margin-bottom: 20px
+}
+
+.social-stats {
+    @include flex-col;
+    background: white;
+
+    h2 {
+        display: block;
+        width: 90%;
+        @include margin-center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+   
+.stat {
+    @include flex-center;
+    @include margin-center;
+    padding: 10px;
+    background: $bodyColor;
+    width: 90%;
+    border: 1px solid rgb(170, 170, 170);
+    margin-bottom: 15px;
+    border-radius: 5px;
+
+    img {
+        width: 60px;
+        padding: 10px;
+        background-color: $lightBlue;
+        border-radius: 50px;
+    }
+
+    div {
+        margin-left: 16px;
+    }
+
+    h3 {
+        color: $lightBlue;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    span {
+        color: gray;
+        font-weight: 300;
+        font-size: 40px
+    }
+}
+
 
 ////////////////////////////////
 

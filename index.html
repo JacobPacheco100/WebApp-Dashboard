@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
     <title>Document</title>
@@ -32,26 +33,61 @@
     </div>
 
 
-    <h1 class="dashboard-tab">Dashboard</h1>
+    <span class="dashboard-tab">Dashboard</span>
     <main>
-
+        <div class="alert">
+            <p><span>Alert</span>: You have undread messages</p>
+            <i class='bx bx-x'></i>
+        </div>
         <div>
+            <h2>TRAFFIC</h2>
             <canvas id="traffic-chart"></canvas>
         </div>
         <div>
+            <h2>DAILY TRAFFIC</h2>
             <canvas id="daily-chart"></canvas>
         </div>
         <div>
+            <h2>MOBILE USERS User</h2>
             <canvas id="mobile-chart"></canvas>
         </div>
     </main>
     <section>
-        <div class="social-stats"></div>
+        <div class="social-stats">
+            <h2>SOCIAL STATS</h2>
+
+            <div class="stat">
+                <img src="svgs/facebook.svg" alt="facebook">
+                <div>
+                    <h3>Facebook</h3>
+                    <span>10,320</span>
+                </div>  
+            </div>
+
+            <div class="stat">
+                <img src="svgs/instagram.svg" alt="facebook">
+                <div>
+                    <h3>Instagram</h3>
+                    <span>16,445</span>
+                </div>  
+            </div>
+
+            <div class="stat">
+                <img src="svgs/twitter.svg" alt="facebook">
+                <div>
+                    <h3>Twitter</h3>
+                    <span>22,189</span>
+                </div>  
+            </div>
+
+        </div>
+
         <div class="new-members"></div>
         <div class="recent-activities"></div>
         <div class="message-user"></div>
         <div class="settings"></div>
     </section>
+
 
     <script src="app.js"></script>
 </body>
