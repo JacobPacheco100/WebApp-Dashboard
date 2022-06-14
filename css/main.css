@@ -75,16 +75,6 @@ nav div span {
   width: 30px;
 }
 
-main {
-  padding-left: 60px;
-  width: 100%;
-}
-
-main div {
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
 @media (min-width: 768px) {
   .container2 {
     width: 50px;
@@ -98,6 +88,14 @@ main div {
     flex-direction: column;
     width: 100%;
     height: 200px;
+  }
+  main {
+    padding-left: 60px;
+    width: 100%;
+  }
+  main div {
+    max-width: 1500px;
+    margin: 0 auto;
   }
 }
 

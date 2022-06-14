@@ -78,16 +78,16 @@ nav div span {
     }
 }
 
+.dashboard-tab {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px;
+    display: block;
+    background: red;
+    border: solid black 1px
+}
+
 ////////////////////////////////
 
-main {
-    padding-left: 60px;
-    width: 100%;
-}
-
-main div {
-    max-width: 1500px;
-    @include margin-center;
-}
 
 @import 'desktop';
