@@ -1,26 +1,3 @@
 @media (min-width: 768px) {
-    .container2 {
-        width: 50px;
-        height: 100vh;
-        padding-top: 20px;
-        position: absolute;
-        top: 50px;
-        left: 0;
-    }
-
-    .tabs {
-        flex-direction: column;
-        width: 100%;
-        height: 200px;
-    }
-
-    main {
-        padding-left: 60px;
-        width: 100%;
-    }
     
-    main div {
-        max-width: 1500px;
-        @include margin-center;
-    }
 }
