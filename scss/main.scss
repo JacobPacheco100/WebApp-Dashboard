@@ -25,6 +25,7 @@ body {
     width: 100%;
     background: rgb(111, 115, 218);
     color: white;
+    grid-area: app-header;
 }
 
 nav {
@@ -62,6 +63,7 @@ nav div span {
 ////////////////////////////////
 
 .container2 {
+    grid-area: app-nav;
     width: 100%;
     background: rgb(65, 67, 117);
 }
@@ -101,7 +103,7 @@ nav div span {
     font-size: 13px;
     height: 30px;
     border-radius: 5px;
-    width: 90%;
+    width: 100%;
     
 
     span {
@@ -110,30 +112,34 @@ nav div span {
 }
 
 main {
+    grid-area: app-main;
     background: white;
     padding-top: 20px;
+
 }
 
-main div {
+
+
+.underline {
     border-bottom: 1px solid rgb(177, 177, 177);
-    padding: 20px
 }
 
 main div h2 {
     margin-bottom: 20px
 }
 
+.social-stat-container h2 {
+    display: block;
+    width: 100%;
+    @include margin-center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
 .social-stats {
     @include flex-col;
     background: white;
-
-    h2 {
-        display: block;
-        width: 90%;
-        @include margin-center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
 }
    
 .stat {
@@ -141,7 +147,7 @@ main div h2 {
     @include margin-center;
     padding: 10px;
     background: $bodyColor;
-    width: 90%;
+    width: 100%;
     border: 1px solid rgb(170, 170, 170);
     margin-bottom: 15px;
     border-radius: 5px;
@@ -169,6 +175,35 @@ main div h2 {
         font-size: 40px
     }
 }
+
+////////
+
+.members {
+    @include flex-col;
+
+    .member {
+        @include flex-col;
+        width: 100%;
+        padding: 25px 0;
+        border-bottom: solid 1px rgb(170, 170, 170);
+
+        img {
+            width: 80px;
+            border-radius: 40px
+        }
+
+        p {
+            margin-top: 3px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $lightBlue;
+            margin-top: 3px
+        }
+    }
+}
+
 
 
 ////////////////////////////////
