@@ -55,7 +55,16 @@
     }
 
     .member {
-        flex-direction: row;
+        @include flex-between-center;
+        width: 100%;
+    }
+
+    .person {
+        @include flex-between-center;
+        
+        .name-email {
+            text-align: left;
+        }
     }
     
 }

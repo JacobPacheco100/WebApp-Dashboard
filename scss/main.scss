@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-html {
+html { 
     font-family: 'Roboto', sans-serif;
 }
 
@@ -176,34 +176,31 @@ main div h2 {
     }
 }
 
-////////
+// NEW MEMBERS
 
-.members {
+//member person name-email span
+
+.new-members-container {
     @include flex-col;
-
-    .member {
-        @include flex-col;
-        width: 100%;
-        padding: 25px 0;
-        border-bottom: solid 1px rgb(170, 170, 170);
-
-        img {
-            width: 80px;
-            border-radius: 40px
-        }
-
-        p {
-            margin-top: 3px;
-        }
-
-        a {
-            text-decoration: none;
-            color: $lightBlue;
-            margin-top: 3px
-        }
-    }
 }
 
+.member {
+    @include flex-col;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: solid 1px black;
+
+    .person {
+        text-align: center;
+    }
+
+    img {
+        width: 80px;
+        border-radius: 50px;
+    }
+
+}
 
 
 ////////////////////////////////

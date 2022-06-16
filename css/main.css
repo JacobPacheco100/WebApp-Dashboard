@@ -171,32 +171,29 @@ main div h2 {
   font-size: 40px;
 }
 
-.members {
+.new-members-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
-.members .member {
+
+.member {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding: 25px 0;
-  border-bottom: solid 1px rgb(170, 170, 170);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: solid 1px black;
 }
-.members .member img {
+.member .person {
+  text-align: center;
+}
+.member img {
   width: 80px;
-  border-radius: 40px;
-}
-.members .member p {
-  margin-top: 3px;
-}
-.members .member a {
-  text-decoration: none;
-  color: rgb(111, 115, 218);
-  margin-top: 3px;
+  border-radius: 50px;
 }
 
 @media (min-width: 768px) {
@@ -240,7 +237,18 @@ main div h2 {
     width: 500px;
   }
   .member {
-    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .person .name-email {
+    text-align: left;
   }
 }
 
