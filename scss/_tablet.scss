@@ -18,20 +18,18 @@
         position: absolute;
         top: 50px;
         left: 0;
+
+        .tabs {
+            @include flex-col;
+            width: 100%;
+            height: 200px;
+        }
     }
 
-    .tabs {
-        flex-direction: column;
-        width: 100%;
-        height: 200px;
-    }
+    //  main
 
 
-    .dashboard-tab {
-        margin-left: 50px;
-    }
-
-    // 2 charts
+    //stats
 
     .duo-chart {
         @include flex-between-center;
@@ -42,29 +40,39 @@
         }
     }
 
-    .social-stats {
-        flex-direction: row;
+    .social-stat-container .social-stats {
+        @include flex-between-center;
+        width: auto;
 
         h2 {
             width: auto;
         }
+
     }
 
-    .stat {
-        width: 500px;
-    }
 
-    .member {
-        @include flex-between-center;
-        width: 100%;
+
+    // boxs
+
+    .box-container .box {
+        flex-direction: row;
+
+        img {
+            margin-right: 20px;
+        }
+
+        i {
+            display: block;
+            font-size: 30px;
+        }
     }
 
     .person {
-        @include flex-between-center;
-        
-        .name-email {
-            text-align: left;
-        }
+        display: flex;
+        align-items: center;
+        text-align: left;
+        justify-content: space-between;
     }
-    
+
+
 }

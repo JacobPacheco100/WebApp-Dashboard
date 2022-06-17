@@ -2,8 +2,9 @@
 // font-family: 'Roboto', sans-serif;
 
 @import 'values';
+@import 'desktop';
+@import 'tablet';
 
-// NAVBAR 
 
 * {
     margin: 0;
@@ -19,7 +20,7 @@ body {
     background: $bodyColor;
 }
 
-////////////////////////////////////
+// header
 
 .container1 {
     width: 100%;
@@ -64,7 +65,6 @@ nav div span {
 
 .container2 {
     grid-area: app-nav;
-    width: 100%;
     background: rgb(65, 67, 117);
 }
 
@@ -104,6 +104,8 @@ nav div span {
     height: 30px;
     border-radius: 5px;
     width: 100%;
+    padding: 20px;
+    margin-bottom: 14px;
     
 
     span {
@@ -118,14 +120,19 @@ main {
 
 }
 
+.main-container {
+    width: 90%;
+    margin: 0 auto;
+}
 
 
 .underline {
+    padding-bottom: 60px;
     border-bottom: 1px solid rgb(177, 177, 177);
 }
 
 main div h2 {
-    margin-bottom: 20px
+    margin-top: 20px;
 }
 
 .social-stat-container h2 {
@@ -144,7 +151,6 @@ main div h2 {
    
 .stat {
     @include flex-center;
-    @include margin-center;
     padding: 10px;
     background: $bodyColor;
     width: 100%;
@@ -176,35 +182,136 @@ main div h2 {
     }
 }
 
-// NEW MEMBERS
-
-//member person name-email span
-
-.new-members-container {
-    @include flex-col;
+.mid-stat {
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
-.member {
-    @include flex-col; //@include flex-between-center;
-    width: 100%;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    border-bottom: solid 1px black;
 
-    .person {
-        text-align: center;
-    }
+
+// new activity
+
+.box-container {
+    width: 100%;
+}
+
+.box {
+    @include flex-col;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: solid 1px black;
 
     img {
         width: 80px;
         border-radius: 50px;
     }
 
+    span {
+        font-weight: 500;
+    }
+
+    i {
+        display: none;
+    }
 }
 
+// message user
 
-////////////////////////////////
+.message-user {
+    width: 100%;
+}
 
+.message-user form {
+    @include flex-col;
+    align-items: baseline;
 
-@import 'desktop';
-@import 'tablet';
+    input, textarea {
+        width: 100%;
+        background: $bodyColor;
+        border: 1px solid rgb(156, 156, 156);
+        min-height: 40px;
+        border-radius: 3px;
+
+        padding: 10px;
+
+        &::placeholder {
+            color: rgb(169, 169, 169);
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+
+    textarea {
+        height: 100px;
+        margin: 10px 0;
+    }
+
+    button {
+        background: $lightBlue;
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        letter-spacing: .1em;
+    }
+}
+
+.settings {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.settings-box {
+    @include flex-col;
+    border-top: 1px solid black;
+    align-items: baseline;
+    width: 100%;
+
+    .sett {
+        @include flex-between-center;
+        width: 100%;
+        margin: 20px 0;
+
+        button {
+            padding: 15px;
+            background: $lightBlue;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            width: 100px;
+        }
+    }
+
+    select {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background: $bodyColor;
+        border: 1px solid rgb(171, 171, 171);
+        border-radius: 5px
+    }
+
+    .settings-btns {
+        @include flex-between-center;
+        width: 100%;
+        margin-bottom: 20px;
+
+        button {
+            background: $lightBlue;
+            width: 48%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            letter-spacing: .1em;
+        }
+
+        .cancel {
+            background: gray;
+        }
+    }
+
+}

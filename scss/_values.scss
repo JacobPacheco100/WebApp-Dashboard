@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
 }
 
 @mixin flex-col {
@@ -30,6 +31,10 @@
 h2 {
     font-weight: 400;
     font-size: 16px;
+}
+
+.txt-small {
+    font-weight: 300;
 }
 
 // color 

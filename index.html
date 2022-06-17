@@ -37,103 +37,196 @@
     
     
         <main>
-            <span class="dashboard-tab">Dashboard</span>
-            <div class="alert">
-                <p><span>Alert</span>: You have undread messages</p>
-                <i class='bx bx-x'></i>
-            </div>
-            <div class="underline">
-                <h2>TRAFFIC</h2>
-                <canvas id="traffic-chart"></canvas>
-            </div>
-           <div class="duo-chart underline">
-            <div>
-                <h2>DAILY TRAFFIC</h2>
-                <canvas id="daily-chart"></canvas>
-            </div>
-            <div>
-                <h2>MOBILE USERS User</h2>
-                <canvas id="mobile-chart"></canvas>
-            </div>
-           </div>
-        <div class="social-stat-container">
-            <h2>SOCIAL STATS</h2>
-            <div class="social-stats">
-        
-                <div class="stat">
-                    <img src="svgs/facebook.svg" alt="facebook">
-                    <div>
-                        <h3>Facebook</h3>
-                        <span>10,320</span>
+            <div class="main-container">
+                <span class="dashboard-tab">Dashboard</span>
+
+                <!-- alert -->
+                <div class="alert">
+                    <p><span>Alert</span>: You have undread messages</p>
+                    <i class='bx bx-x'></i>
+                </div>
+                <!-- graphs -->
+                <div class="underline">
+                    <h2>TRAFFIC</h2>
+                    <canvas id="traffic-chart"></canvas>
+                </div>
+                <div class="duo-chart underline">
+                <div>
+                    <h2>DAILY TRAFFIC</h2>
+                    <canvas id="daily-chart"></canvas>
+                </div>
+                <div>
+                    <h2>MOBILE USERS User</h2>
+                    <canvas id="mobile-chart"></canvas>
+                </div>
+                </div>
+            <!-- social stats -->
+            <div class="social-stat-container">
+                <h2>SOCIAL STATS</h2>
+                <div class="social-stats">
+            
+                    <div class="stat">
+                        <img src="svgs/facebook.svg" alt="facebook">
+                        <div>
+                            <h3>Facebook</h3>
+                            <span>10,320</span>
+                        </div>
+                    </div>
+            
+                    <div class="stat mid-stat">
+                        <img src="svgs/instagram.svg" alt="facebook">
+                        <div>
+                            <h3>Instagram</h3>
+                            <span>16,445</span>
+                        </div>
+                    </div>
+            
+                    <div class="stat">
+                        <img src="svgs/twitter.svg" alt="facebook">
+                        <div>
+                            <h3>Twitter</h3>
+                            <span>22,189</span>
+                        </div>
                     </div>
                 </div>
-        
-                <div class="stat">
-                    <img src="svgs/instagram.svg" alt="facebook">
-                    <div>
-                        <h3>Instagram</h3>
-                        <span>16,445</span>
+            </div>
+
+        <!-- FLAT DESK -->
+        <!-- new Members -->
+        <div class="flat__desk">    
+            <div class="box-container">
+                <h2>NEW MEMBERS</h2>
+                <div class="box">
+                    <div class="person">
+                        <img src="images/member-1.jpg" alt="member1">
+                        <div class="name-email">
+                            <p>Victoria Chambers</p>
+                            <a href="#">victoria.chambers80@example.com</a>
+                        </div>
                     </div>
+                    <span>10/15/20</span>
                 </div>
-        
-                <div class="stat">
-                    <img src="svgs/twitter.svg" alt="facebook">
-                    <div>
-                        <h3>Twitter</h3>
-                        <span>22,189</span>
+                <div class="box">
+                    <div class="person">
+                        <img src="images/member-2.jpg" alt="member2">
+                        <div class="name-email">
+                            <p>Dale Byrd</p>
+                            <a href="#">dale.byrd52@example.com</a>
+                        </div>
                     </div>
+                    <span>10/15/20</span>
+                </div>
+                <div class="box">
+                    <div class="person">
+                        <img src="images/member-3.jpg" alt="member3">
+                        <div class="name-email">
+                            <p>Dawn Wood</p>
+                            <a href="#">dawn.wood16@example.com</a>
+                        </div>
+                    </div>
+                    <span>10/15/20</span>
+                </div>
+                <div class="box">
+                    <div class="person">
+                        <img src="images/member-4.jpg" alt="member4">
+                        <div class="name-email">
+                            <p>Dan Oliver</p>
+                            <a href="#">dan.oliver82@example.com</a>
+                        </div>
+                    </div>
+                    <span>10/15/20</span>
                 </div>
             </div>
-        </div>
-        
-        <div class="new-members-container">
-            <h2>NEW MEMBERS</h2>
-            <div class="member">
-                <div class="person">
-                    <img src="images/member-1.jpg" alt="member1">
-                    <div class="name-email">
-                        <p>Victoria Chambers</p>
-                        <a href="#">victoria.chambers80@example.com</a>
+            <!-- recent activity -->
+            <div class="recent-activity box-container">
+                <h2>RECENT ACTIVITY</h2>
+
+                <div class="box">
+                    <div class="person">
+                        <img src="images/member-1.jpg" alt="member1">
+                        <div class="text">
+                            <p>Victoria Chambers commented on <span>webApp's SEO Tips</span></p>
+                            <p class="txt-small">4 hours ago</p>
+                        </div>
                     </div>
+                    <i class='bx bx-chevron-right' ></i>
                 </div>
-                <span>10/15/20</span>
-            </div>
-            <div class="member">
-                <div class="person">
-                    <img src="images/member-1.jpg" alt="member1">
-                    <div class="name-email">
-                        <p>Victoria Chambers</p>
-                        <a href="#">victoria.chambers80@example.com</a>
+
+                <div class="box">
+                    <div class="person">
+                        <img src="images/member-2.jpg" alt="member2">
+                        <div class="text">
+                            <p>Dale Byrd liked the post <span>Facebook's Changes for 2021</span></p>
+                            <p class="txt-small">5 hours ago</p>
+                        </div>
                     </div>
+                    <i class='bx bx-chevron-right' ></i>
                 </div>
-                <span>10/15/20</span>
-            </div>
-            <div class="member">
-                <div class="person">
-                    <img src="images/member-1.jpg" alt="member1">
-                    <div class="name-email">
-                        <p>Victoria Chambers</p>
-                        <a href="#">victoria.chambers80@example.com</a>
+
+                <div class="box">
+                    <div class="person">
+                        <img src="images/member-3.jpg" alt="member3">
+                        <div class="text">
+                            <p>Dawn Wood commented on <span>Facebook's changes for 2021</span></p>
+                            <p class="txt-small">5 hours ago</p>
+                        </div>
                     </div>
+                    <i class='bx bx-chevron-right' ></i>
                 </div>
-                <span>10/15/20</span>
-            </div>
-            <div class="member">
-                <div class="person">
-                    <img src="images/member-1.jpg" alt="member1">
-                    <div class="name-email">
-                        <p>Victoria Chambers</p>
-                        <a href="#">victoria.chambers80@example.com</a>
+
+                <div class="box">
+                    <div class="person">
+                        <img src="images/member-4.jpg" alt="member4">
+                        <div class="text">
+                            <p>Dan Oliver posted <span>webApp's SEO Tips</span></p>
+                            <p class="txt-small">1 day ago</p>
+                        </div>
                     </div>
+                    <i class='bx bx-chevron-right' ></i>
                 </div>
-                <span>10/15/20</span>
+
             </div>
-        </div>
 
 
-        <div class="recent-activities"></div>
-        <div class="message-user"></div>
-        <div class="settings"></div>
+         <!-- message user -->
+         <div">
+            </div>
+                <div class="message-user">
+                    <form action="#">
+                        <h2>MESSAGE USER</h2>
+                        <br>
+                        <input type="text" placeholder="Search for User">
+                        <textarea name="message" placeholder="Message for User"></textarea>
+                        <button>SEND</button>
+                    </form>
+                </div>
+                <div class="settings"></div>
+
+            <!-- settings -->
+            <div class="settings">
+                <div class="settings-box">
+                    <h2>SETTINGS</h2>
+                    <div class="sett">
+                        <p>Send Email Notifications</p>
+                        <button>on</button>
+                    </div>
+                    <div class="sett">
+                        <p>Send Email Notifications</p>
+                        <button>on</button>
+                    </div>
+                    <select name="timezone" id="timezone">
+                        <option value="#">EST</option>
+                        <option value="#">EST</option>
+                        <option value="#">EST</option>
+                    </select>
+                    <div class="settings-btns">
+                        <button>SAVE</button>
+                        <button class="cancel">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+         </div>
+
     </main>
 
 

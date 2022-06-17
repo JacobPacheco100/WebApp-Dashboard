@@ -8,6 +8,90 @@ h2 {
   font-size: 16px;
 }
 
+.txt-small {
+  font-weight: 300;
+}
+
+@media (min-width: 1024px) {
+  .flat__desk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .flat__desk .recent-activity box {
+    padding: 20px;
+  }
+  .box-container {
+    padding: 10px;
+  }
+  .box-container .box {
+    border-left: 1px solid rgb(206, 206, 206);
+    padding-left: 20px;
+  }
+  main div h2 {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: "app-header app-header" "app-nav app-main" "app-nav app-main";
+  }
+  .container2 {
+    width: 50px;
+    height: 400vh;
+    padding-top: 20px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  .container2 .tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+  }
+  .duo-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+  }
+  .duo-chart div {
+    flex-grow: 1;
+  }
+  .social-stat-container .social-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+  }
+  .social-stat-container .social-stats h2 {
+    width: auto;
+  }
+  .box-container .box {
+    flex-direction: row;
+  }
+  .box-container .box img {
+    margin-right: 20px;
+  }
+  .box-container .box i {
+    display: block;
+    font-size: 30px;
+  }
+  .person {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +117,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   margin: 0 auto;
   width: 95%;
   height: 50px;
@@ -42,6 +127,7 @@ nav div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 
 nav .bell {
@@ -66,7 +152,6 @@ nav div span {
 
 .container2 {
   grid-area: app-nav;
-  width: 100%;
   background: rgb(65, 67, 117);
 }
 
@@ -74,6 +159,7 @@ nav div span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   margin: 0 auto;
   height: 50px;
   width: 65%;
@@ -97,6 +183,7 @@ nav div span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   margin: 0 auto;
   background: rgb(111, 115, 218);
   color: white;
@@ -105,6 +192,8 @@ nav div span {
   height: 30px;
   border-radius: 5px;
   width: 100%;
+  padding: 20px;
+  margin-bottom: 14px;
 }
 .alert span {
   font-weight: 500;
@@ -116,12 +205,18 @@ main {
   padding-top: 20px;
 }
 
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .underline {
+  padding-bottom: 60px;
   border-bottom: 1px solid rgb(177, 177, 177);
 }
 
 main div h2 {
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .social-stat-container h2 {
@@ -143,7 +238,6 @@ main div h2 {
 .stat {
   display: flex;
   align-items: center;
-  margin: 0 auto;
   padding: 10px;
   background: rgb(243, 243, 243);
   width: 100%;
@@ -171,85 +265,132 @@ main div h2 {
   font-size: 40px;
 }
 
-.new-members-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
+.mid-stat {
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
-.member {
+.box-container {
+  width: 100%;
+}
+
+.box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
   border-bottom: solid 1px black;
 }
-.member .person {
-  text-align: center;
-}
-.member img {
+.box img {
   width: 80px;
   border-radius: 50px;
 }
+.box span {
+  font-weight: 500;
+}
+.box i {
+  display: none;
+}
 
-@media (min-width: 768px) {
-  .grid {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    grid-template-areas: "app-header app-header" "app-nav app-main" "app-nav app-main";
-  }
-  .container2 {
-    width: 50px;
-    height: 400vh;
-    padding-top: 20px;
-    position: absolute;
-    top: 50px;
-    left: 0;
-  }
-  .tabs {
-    flex-direction: column;
-    width: 100%;
-    height: 200px;
-  }
-  .dashboard-tab {
-    margin-left: 50px;
-  }
-  .duo-chart {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  .duo-chart div {
-    flex-grow: 1;
-  }
-  .social-stats {
-    flex-direction: row;
-  }
-  .social-stats h2 {
-    width: auto;
-  }
-  .stat {
-    width: 500px;
-  }
-  .member {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  .person {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .person .name-email {
-    text-align: left;
-  }
+.message-user {
+  width: 100%;
+}
+
+.message-user form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: baseline;
+}
+.message-user form input, .message-user form textarea {
+  width: 100%;
+  background: rgb(243, 243, 243);
+  border: 1px solid rgb(156, 156, 156);
+  min-height: 40px;
+  border-radius: 3px;
+  padding: 10px;
+}
+.message-user form input::placeholder, .message-user form textarea::placeholder {
+  color: rgb(169, 169, 169);
+  font-family: "Roboto", sans-serif;
+}
+.message-user form textarea {
+  height: 100px;
+  margin: 10px 0;
+}
+.message-user form button {
+  background: rgb(111, 115, 218);
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+.settings {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.settings-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid black;
+  align-items: baseline;
+  width: 100%;
+}
+.settings-box .sett {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 20px 0;
+}
+.settings-box .sett button {
+  padding: 15px;
+  background: rgb(111, 115, 218);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 100px;
+}
+.settings-box select {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgb(243, 243, 243);
+  border: 1px solid rgb(171, 171, 171);
+  border-radius: 5px;
+}
+.settings-box .settings-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.settings-box .settings-btns button {
+  background: rgb(111, 115, 218);
+  width: 48%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  letter-spacing: 0.1em;
+}
+.settings-box .settings-btns .cancel {
+  background: gray;
 }
 
 /*# sourceMappingURL=main.css.map */
