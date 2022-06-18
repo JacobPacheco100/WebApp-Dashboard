@@ -111,6 +111,16 @@ nav div span {
     span {
         font-weight: 500;
     }
+
+    i {
+        font-size: 20px;
+        transition: .1s all ease-in;
+        &:hover {
+            background: white;
+            color: $lightBlue;
+            border-radius: 2px;
+        }
+    }
 }
 
 main {
@@ -224,6 +234,7 @@ main div h2 {
 }
 
 .message-user form {
+    height: 354px;
     @include flex-col;
     align-items: baseline;
 
@@ -243,7 +254,7 @@ main div h2 {
     }
 
     textarea {
-        height: 100px;
+        height: 50%;
         margin: 10px 0;
     }
 
@@ -265,7 +276,6 @@ main div h2 {
 
 .settings-box {
     @include flex-col;
-    border-top: 1px solid black;
     align-items: baseline;
     width: 100%;
 
@@ -297,7 +307,6 @@ main div h2 {
     .settings-btns {
         @include flex-between-center;
         width: 100%;
-        margin-bottom: 20px;
 
         button {
             background: $lightBlue;
@@ -315,3 +324,21 @@ main div h2 {
     }
 
 }
+
+// BELL ANIMATION
+// .bell path:hover {
+//     fill:;
+// }
+
+.message-user {
+    margin-right: 5px;
+}
+
+.settings {
+    margin-left: 5px
+}
+
+.close {
+    display: none !important;
+}
+

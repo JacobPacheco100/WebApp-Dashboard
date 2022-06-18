@@ -102,3 +102,39 @@ let mobileChart = new Chart(mobileCanvas, {
     data: mobileData,
     options: mobileOptions
     });
+
+// Alert close
+
+const close = document.getElementById('close')
+const alertMessage = document.querySelector('.alert')
+
+close.addEventListener('click', () => {
+    alertMessage.classList.toggle('close')
+})
+
+// Form functionality
+
+const form = document.querySelector('form')
+const input = document.getElementById('input')
+const message = document.getElementById('message')
+const send = document.getElementById('send')
+
+send.addEventListener('click', ()=> {
+    if (input.value.length > 0 && message.value.length > 0){
+        alert('Your message has been sent :)')
+        input.value = ''
+        message.value = ''
+    } else {
+        alert('Input must be filled!')
+    }
+})
+
+// form.addEventListener('click', (e)=> {
+//     if (e.target === send && input.value.length > 0 && message.value.length > 0){
+//         alert('Your message has been sent :)')
+//         input.value = ''
+//         message.value = ''
+//     } else {
+//         alert('Input must be filled!')
+//     }
+// })

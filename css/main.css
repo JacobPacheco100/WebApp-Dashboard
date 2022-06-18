@@ -12,7 +12,14 @@ h2 {
   font-weight: 300;
 }
 
+.pad {
+  padding: 10px;
+}
+
 @media (min-width: 1024px) {
+  .container {
+    height: 2323px;
+  }
   .flat__desk {
     display: flex;
     justify-content: space-between;
@@ -29,6 +36,9 @@ h2 {
     border-left: 1px solid rgb(206, 206, 206);
     padding-left: 20px;
   }
+  .message-user {
+    margin-top: 20px;
+  }
   main div h2 {
     margin-bottom: 20px;
   }
@@ -41,7 +51,7 @@ h2 {
   }
   .container2 {
     width: 50px;
-    height: 400vh;
+    height: 2724px;
     padding-top: 20px;
     position: absolute;
     top: 50px;
@@ -198,6 +208,15 @@ nav div span {
 .alert span {
   font-weight: 500;
 }
+.alert i {
+  font-size: 20px;
+  transition: 0.1s all ease-in;
+}
+.alert i:hover {
+  background: white;
+  color: rgb(111, 115, 218);
+  border-radius: 2px;
+}
 
 main {
   grid-area: app-main;
@@ -301,6 +320,7 @@ main div h2 {
 }
 
 .message-user form {
+  height: 354px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -320,7 +340,7 @@ main div h2 {
   font-family: "Roboto", sans-serif;
 }
 .message-user form textarea {
-  height: 100px;
+  height: 50%;
   margin: 10px 0;
 }
 .message-user form button {
@@ -343,7 +363,6 @@ main div h2 {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  border-top: 1px solid black;
   align-items: baseline;
   width: 100%;
 }
@@ -378,7 +397,6 @@ main div h2 {
   align-items: center;
   flex-direction: row;
   width: 100%;
-  margin-bottom: 20px;
 }
 .settings-box .settings-btns button {
   background: rgb(111, 115, 218);
@@ -391,6 +409,18 @@ main div h2 {
 }
 .settings-box .settings-btns .cancel {
   background: gray;
+}
+
+.message-user {
+  margin-right: 5px;
+}
+
+.settings {
+  margin-left: 5px;
+}
+
+.close {
+  display: none !important;
 }
 
 /*# sourceMappingURL=main.css.map */
