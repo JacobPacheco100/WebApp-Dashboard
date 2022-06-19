@@ -16,33 +16,6 @@ h2 {
   padding: 10px;
 }
 
-@media (min-width: 1024px) {
-  .container {
-    height: 2323px;
-  }
-  .flat__desk {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-  }
-  .flat__desk .recent-activity box {
-    padding: 20px;
-  }
-  .box-container {
-    padding: 10px;
-  }
-  .box-container .box {
-    border-left: 1px solid rgb(206, 206, 206);
-    padding-left: 20px;
-  }
-  .message-user {
-    margin-top: 20px;
-  }
-  main div h2 {
-    margin-bottom: 20px;
-  }
-}
 @media (min-width: 768px) {
   .grid {
     display: grid;
@@ -51,9 +24,7 @@ h2 {
   }
   .container2 {
     width: 50px;
-    height: 2724px;
     padding-top: 20px;
-    position: absolute;
     top: 50px;
     left: 0;
   }
@@ -102,6 +73,40 @@ h2 {
     justify-content: space-between;
   }
 }
+.underline .traffic-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    height: 2323px;
+  }
+  .flat__desk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .flat__desk .recent-activity box {
+    padding: 20px;
+  }
+  .box-container {
+    padding: 10px;
+  }
+  .box-container .box {
+    border-left: 1px solid rgb(206, 206, 206);
+    padding-left: 20px;
+  }
+  .message-user {
+    margin-top: 20px;
+  }
+  main div h2 {
+    margin-bottom: 20px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -114,6 +119,12 @@ html {
 
 body {
   background: rgb(243, 243, 243);
+}
+
+a,
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
 .container1 {
@@ -264,11 +275,9 @@ main div h2 {
   margin-bottom: 15px;
   border-radius: 5px;
 }
-.stat img {
+.stat svg {
   width: 60px;
-  padding: 10px;
-  background-color: rgb(111, 115, 218);
-  border-radius: 50px;
+  padding-left: 10px;
 }
 .stat div {
   margin-left: 16px;
@@ -327,7 +336,8 @@ main div h2 {
   flex-direction: column;
   align-items: baseline;
 }
-.message-user form input, .message-user form textarea {
+.message-user form input,
+.message-user form textarea {
   width: 100%;
   background: rgb(243, 243, 243);
   border: 1px solid rgb(156, 156, 156);
@@ -335,7 +345,8 @@ main div h2 {
   border-radius: 3px;
   padding: 10px;
 }
-.message-user form input::placeholder, .message-user form textarea::placeholder {
+.message-user form input::placeholder,
+.message-user form textarea::placeholder {
   color: rgb(169, 169, 169);
   font-family: "Roboto", sans-serif;
 }
@@ -421,6 +432,46 @@ main div h2 {
 
 .close {
   display: none !important;
+}
+
+.bell:hover {
+  cursor: pointer;
+  transform-origin: 30% 50%;
+  transform: scale(1.2);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.traffic-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: baseline;
+  margin-bottom: 40px;
+}
+.traffic-options ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 400px;
+}
+.traffic-options ul a {
+  color: black;
+}
+
+.traffic-option-active {
+  background: #78cf82;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.settings input {
+  width: 20px;
+  padding: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

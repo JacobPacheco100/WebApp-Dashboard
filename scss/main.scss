@@ -1,328 +1,321 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 // font-family: 'Roboto', sans-serif;
 
-@import 'values';
-@import 'desktop';
-@import 'tablet';
-
+@import "values";
+@import "tablet";
+@import "desktop";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html { 
-    font-family: 'Roboto', sans-serif;
+html {
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    background: $bodyColor;
+  background: $bodyColor;
+}
+
+a,
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
 // header
 
 .container1 {
-    width: 100%;
-    background: rgb(111, 115, 218);
-    color: white;
-    grid-area: app-header;
+  width: 100%;
+  background: rgb(111, 115, 218);
+  color: white;
+  grid-area: app-header;
 }
 
 nav {
-    @include flex-between-center;
-    @include margin-center;
-    width: 95%;
-    height: 50px
+  @include flex-between-center;
+  @include margin-center;
+  width: 95%;
+  height: 50px;
 }
 
-
 nav div {
-    @include flex-between-center;
+  @include flex-between-center;
 }
 
 nav .bell {
-    width: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 10px;
-    border-right: solid 1px $lightBlue;
-    margin-right: 10px;
+  width: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  border-right: solid 1px $lightBlue;
+  margin-right: 10px;
 }
 
 nav div img:nth-child(2) {
-    width: 35px;
-    border-radius: 50px;
-    margin-right: 10px;
+  width: 35px;
+  border-radius: 50px;
+  margin-right: 10px;
 }
 
 nav div span {
-    font-size: 12px;
-    font-weight: 300;
+  font-size: 12px;
+  font-weight: 300;
 }
 
 ////////////////////////////////
 
 .container2 {
-    grid-area: app-nav;
-    background: rgb(65, 67, 117);
+  grid-area: app-nav;
+  background: rgb(65, 67, 117);
 }
 
 .tabs {
-    @include flex-between-center;
-    @include margin-center;
-    height: 50px;
-    width: 65%;
+  @include flex-between-center;
+  @include margin-center;
+  height: 50px;
+  width: 65%;
 
-
-    img {
-        width: 30px
-    }
+  img {
+    width: 30px;
+  }
 }
 
 // DASHBOARD
 
 .dashboard-tab {
-    font-size: 20px;
-    font-weight: 400;
-    background: white;
-    display: inline-block;
-    height: 50px;
-    width: 130px;
-    padding: 10px;
-    padding-top: 14px;
-
+  font-size: 20px;
+  font-weight: 400;
+  background: white;
+  display: inline-block;
+  height: 50px;
+  width: 130px;
+  padding: 10px;
+  padding-top: 14px;
 }
 
 .alert {
-    @include flex-between-center;
-    @include margin-center;
-    background: $lightBlue;
-    color: white;
-    font-weight: 300;
-    font-size: 13px;
-    height: 30px;
-    border-radius: 5px;
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 14px;
-    
+  @include flex-between-center;
+  @include margin-center;
+  background: $lightBlue;
+  color: white;
+  font-weight: 300;
+  font-size: 13px;
+  height: 30px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 14px;
 
-    span {
-        font-weight: 500;
-    }
+  span {
+    font-weight: 500;
+  }
 
-    i {
-        font-size: 20px;
-        transition: .1s all ease-in;
-        &:hover {
-            background: white;
-            color: $lightBlue;
-            border-radius: 2px;
-        }
+  i {
+    font-size: 20px;
+    transition: 0.1s all ease-in;
+    &:hover {
+      background: white;
+      color: $lightBlue;
+      border-radius: 2px;
     }
+  }
 }
 
 main {
-    grid-area: app-main;
-    background: white;
-    padding-top: 20px;
-
+  grid-area: app-main;
+  background: white;
+  padding-top: 20px;
 }
 
 .main-container {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
-
 .underline {
-    padding-bottom: 60px;
-    border-bottom: 1px solid rgb(177, 177, 177);
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgb(177, 177, 177);
 }
 
 main div h2 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .social-stat-container h2 {
-    display: block;
-    width: 100%;
-    @include margin-center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
+  display: block;
+  width: 100%;
+  @include margin-center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .social-stats {
-    @include flex-col;
-    background: white;
+  @include flex-col;
+  background: white;
 }
-   
+
 .stat {
-    @include flex-center;
-    padding: 10px;
-    background: $bodyColor;
-    width: 100%;
-    border: 1px solid rgb(170, 170, 170);
-    margin-bottom: 15px;
-    border-radius: 5px;
+  @include flex-center;
+  padding: 10px;
+  background: $bodyColor;
+  width: 100%;
+  border: 1px solid rgb(170, 170, 170);
+  margin-bottom: 15px;
+  border-radius: 5px;
 
-    img {
-        width: 60px;
-        padding: 10px;
-        background-color: $lightBlue;
-        border-radius: 50px;
-        
-    }
+  svg {
+    width: 60px;
+    padding-left: 10px;
+  }
 
-    div {
-        margin-left: 16px;
-    }
+  div {
+    margin-left: 16px;
+  }
 
-    h3 {
-        color: $lightBlue;
-        font-weight: 400;
-        font-size: 18px;
-    }
-    span {
-        color: gray;
-        font-weight: 300;
-        font-size: 40px
-    }
+  h3 {
+    color: $lightBlue;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  span {
+    color: gray;
+    font-weight: 300;
+    font-size: 40px;
+  }
 }
 
 .mid-stat {
-    margin-right: 20px;
-    margin-left: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
-
-
 
 // new activity
 
 .box-container {
-    width: 100%;
+  width: 100%;
 }
 
 .box {
-    @include flex-col;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 0;
-    border-bottom: solid 1px black;
+  @include flex-col;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: solid 1px black;
 
-    img {
-        width: 80px;
-        border-radius: 50px;
-    }
+  img {
+    width: 80px;
+    border-radius: 50px;
+  }
 
-    span {
-        font-weight: 500;
-    }
+  span {
+    font-weight: 500;
+  }
 
-    i {
-        display: none;
-    }
+  i {
+    display: none;
+  }
 }
 
 // message user
 
 .message-user {
-    width: 100%;
+  width: 100%;
 }
 
 .message-user form {
-    height: 354px;
-    @include flex-col;
-    align-items: baseline;
+  height: 354px;
+  @include flex-col;
+  align-items: baseline;
 
-    input, textarea {
-        width: 100%;
-        background: $bodyColor;
-        border: 1px solid rgb(156, 156, 156);
-        min-height: 40px;
-        border-radius: 3px;
+  input,
+  textarea {
+    width: 100%;
+    background: $bodyColor;
+    border: 1px solid rgb(156, 156, 156);
+    min-height: 40px;
+    border-radius: 3px;
 
-        padding: 10px;
+    padding: 10px;
 
-        &::placeholder {
-            color: rgb(169, 169, 169);
-            font-family: 'Roboto', sans-serif;
-        }
+    &::placeholder {
+      color: rgb(169, 169, 169);
+      font-family: "Roboto", sans-serif;
     }
+  }
 
-    textarea {
-        height: 50%;
-        margin: 10px 0;
-    }
+  textarea {
+    height: 50%;
+    margin: 10px 0;
+  }
 
-    button {
-        background: $lightBlue;
-        width: 100%;
-        padding: 15px;
-        border: none;
-        border-radius: 3px;
-        color: white;
-        letter-spacing: .1em;
-    }
+  button {
+    background: $lightBlue;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    letter-spacing: 0.1em;
+  }
 }
 
 .settings {
-    width: 100%;
-    margin-top: 20px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .settings-box {
-    @include flex-col;
-    align-items: baseline;
+  @include flex-col;
+  align-items: baseline;
+  width: 100%;
+
+  .sett {
+    @include flex-between-center;
+    width: 100%;
+    margin: 20px 0;
+
+    button {
+      padding: 15px;
+      background: $lightBlue;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      width: 100px;
+    }
+  }
+
+  select {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: $bodyColor;
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 5px;
+  }
+
+  .settings-btns {
+    @include flex-between-center;
     width: 100%;
 
-    .sett {
-        @include flex-between-center;
-        width: 100%;
-        margin: 20px 0;
-
-        button {
-            padding: 15px;
-            background: $lightBlue;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            width: 100px;
-        }
+    button {
+      background: $lightBlue;
+      width: 48%;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      letter-spacing: 0.1em;
     }
 
-    select {
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 10px;
-        background: $bodyColor;
-        border: 1px solid rgb(171, 171, 171);
-        border-radius: 5px
+    .cancel {
+      background: gray;
     }
-
-    .settings-btns {
-        @include flex-between-center;
-        width: 100%;
-
-        button {
-            background: $lightBlue;
-            width: 48%;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            letter-spacing: .1em;
-        }
-
-        .cancel {
-            background: gray;
-        }
-    }
-
+  }
 }
 
 // BELL ANIMATION
@@ -331,14 +324,53 @@ main div h2 {
 // }
 
 .message-user {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .settings {
-    margin-left: 5px
+  margin-left: 5px;
 }
 
 .close {
-    display: none !important;
+  display: none !important;
 }
 
+.bell:hover {
+  cursor: pointer;
+  transform-origin: 30% 50%;
+  transform: scale(1.2);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+// traffic options
+
+.traffic-options {
+  @include flex-col; //
+  align-items: baseline; //
+  margin-bottom: 40px;
+
+  ul {
+    @include flex-between-center;
+    width: 400px;
+
+    a {
+      color: black;
+    }
+  }
+}
+
+.traffic-option-active {
+  background: #78cf82;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+// settings checkbox
+
+.settings input {
+  width: 20px;
+  padding: 20px;
+}
