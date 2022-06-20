@@ -1,32 +1,46 @@
 @media (min-width: 1024px) {
+  .container {
+    height: 2323px;
+  }
 
-    .container {
-        height: 2323px
-    }
-
-    .flat__desk {
-        @include flex-between-center;
-
-        .recent-activity box {
-            padding: 20px;
-        }
-    }
+  .flat__desk {
+    @include flex-between-center;
+    margin-top: 40px;
 
     .box-container {
-        padding: 10px;
+      width: 50%;
+      border: 1px solid black;
 
-        .box {
-            border-left: 1px solid rgb(206, 206, 206);
-            padding-left: 20px;
-        }
+      h2 {
+        width: 90%;
+        margin: 20px auto;
+      }
+
+      .box {
+        padding: 20px;
+        width: 90%;
+      }
+
+      .box:last-child {
+        border: none;
+      }
     }
+  }
 
+  //   .box-container {
+  //     padding: 10px;
 
-    .message-user {
-        margin-top: 20px;
-    }
+  //     .box {
+  //       border-left: 1px solid rgb(206, 206, 206);
+  //       padding-left: 20px;
+  //     }
+  //   }
 
-    main div h2 {
-        margin-bottom: 20px;
-    }
+  .message-user {
+    margin-top: 20px;
+  }
+
+  main div h2 {
+    margin-bottom: 20px;
+  }
 }
