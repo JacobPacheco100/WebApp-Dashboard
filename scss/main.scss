@@ -161,7 +161,7 @@ main div h2 {
   @include flex-center;
   padding: 10px;
   background: $bodyColor;
-  width: 32%;
+  width: 100%;
   border: 1px solid rgb(170, 170, 170);
   margin-bottom: 15px;
   border-radius: 5px;
@@ -417,4 +417,10 @@ label {
 .inner {
   transform-origin: 50% 50%;
   transform: scale(0.7);
+}
+
+@media (max-width: 1024px) {
+  .d-none {
+    display: none;
+  }
 }
